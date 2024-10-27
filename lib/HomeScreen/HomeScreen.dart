@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:islamiapp/HomeScreen/Tabs/AhadethTab/AhadethTab.dart';
+import 'package:islamiapp/HomeScreen/Tabs/QuraanTab/QuraanTab.dart';
+import 'package:islamiapp/HomeScreen/Tabs/RadioTab/RadioTab.dart';
+import 'package:islamiapp/HomeScreen/Tabs/SebhaTab/SebhaTab.dart';
+
 
 class HomeScreen extends StatefulWidget {
   static const routeName = "home";
@@ -11,6 +16,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
+  List<Widget> tabs = [
+    const RadioTab(),
+    const SebhaTab(),
+    const AhadethTab(),
+    QuraanTab(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -20,33 +31,37 @@ class _HomeScreenState extends State<HomeScreen> {
             image: AssetImage("assets/images/bg3.png"), fit: BoxFit.cover),
       ),
       child: Scaffold(
-        backgroundColor: Colors.transparent,
-        body: const Center(
-          child: Text("Hello"),
-        ),
+        appBar: AppBar(
+            title: const Center(child: Text("Islami"))),
+        body: tabs[currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: currentIndex,
           onTap: (value) {
             setState(() {
               currentIndex = value;
             });
+            print(value);
           },
-          items:  [
+          items: [
             BottomNavigationBarItem(
               backgroundColor: Theme.of(context).colorScheme.primary,
               icon: const ImageIcon(AssetImage("assets/images/radio_blue.png")),
               label: "Radio",
-            ),BottomNavigationBarItem(
+            ),
+            BottomNavigationBarItem(
               backgroundColor: Theme.of(context).colorScheme.primary,
               icon: const ImageIcon(AssetImage("assets/images/sebha_blue.png")),
               label: "Tasbeh",
-            ),BottomNavigationBarItem(
+            ),
+            BottomNavigationBarItem(
               backgroundColor: Theme.of(context).colorScheme.primary,
               icon: const ImageIcon(AssetImage("assets/images/Path 1.png")),
               label: "Ahadeth",
-            ),BottomNavigationBarItem(
+            ),
+            BottomNavigationBarItem(
               backgroundColor: Theme.of(context).colorScheme.primary,
-              icon: const ImageIcon(AssetImage("assets/images/moshaf_gold.png")),
+              icon:
+                  const ImageIcon(AssetImage("assets/images/moshaf_gold.png")),
               label: "Quraan",
             )
           ],
