@@ -12,11 +12,31 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+            backgroundColor: Color(0xffB7935F),
+            unselectedIconTheme: IconThemeData(
+              color: Colors.white,
+              size: 35,
+            ),
+            selectedIconTheme: IconThemeData(
+              color: Colors.black,
+              size: 35,
+            ),
+            selectedItemColor: Colors.black,
+            unselectedItemColor: Colors.white),
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.deepPurple,
+            primary: const Color(0xffB7935F),
+            secondary: const Color(0xffB7935F).withOpacity(0.57),
+            onPrimary: Colors.white,
+            onSecondary: Colors.black),
+      ),
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),
         SplashScreen.routeName: (context) => const SplashScreen()
       },
-      initialRoute: SplashScreen.routeName,
+      initialRoute: HomeScreen.routeName,
     );
   }
 }
