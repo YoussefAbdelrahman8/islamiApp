@@ -4,7 +4,7 @@ import 'package:islamiapp/AhadethDetailsScreen/AhadethDetailsScreen.dart';
 import 'package:islamiapp/DataClasses/Hadeth.dart';
 
 class AhadethTab extends StatefulWidget {
-  AhadethTab({super.key});
+  const AhadethTab({super.key});
 
   @override
   State<AhadethTab> createState() => _AhadethTabState();

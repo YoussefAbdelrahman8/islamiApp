@@ -120,6 +120,8 @@ class QuraanTab extends StatelessWidget {
     Sura(suraName: "An-Nas", verseNumber: "6"),
   ];
 
+  QuraanTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:islamiapp/AhadethDetailsScreen/HadethWidget/HadethWidget.dart';
-import 'package:islamiapp/DataClasses/Hadeth.dart';
 
 class AhadethDetailsScreen extends StatelessWidget {
   static const routeName = "ahadethDetail";

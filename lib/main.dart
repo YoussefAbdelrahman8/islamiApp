@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),
         SplashScreen.routeName: (context) => const SplashScreen(),
-        QuraanDetailsScreen.routeName: (context) => QuraanDetailsScreen(),
+        QuraanDetailsScreen.routeName: (context) => const QuraanDetailsScreen(),
         AhadethDetailsScreen.routeName:(context) => const AhadethDetailsScreen(),
       },
       initialRoute: SplashScreen.routeName,

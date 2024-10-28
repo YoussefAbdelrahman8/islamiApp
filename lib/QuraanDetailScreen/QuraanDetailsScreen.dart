@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,7 +7,7 @@ import 'package:islamiapp/QuraanDetailScreen/SuraWidget/SuraWidget.dart';
 class QuraanDetailsScreen extends StatefulWidget {
   static const routeName = "quraanDetail";
 
-  QuraanDetailsScreen({super.key});
+  const QuraanDetailsScreen({super.key});
 
   @override
   State<QuraanDetailsScreen> createState() => _QuraanDetailsState();
