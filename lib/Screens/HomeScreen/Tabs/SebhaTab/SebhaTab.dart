@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:islamiapp/HomeScreen/Tabs/SebhaTab/BottomPartWidget/BottomPartwidget.dart';
-import 'package:islamiapp/HomeScreen/Tabs/SebhaTab/SebhaIcon.dart';
+import 'package:islamiapp/Screens/HomeScreen/Tabs/SebhaTab/BottomPartWidget/BottomPartwidget.dart';
+import 'package:islamiapp/Screens/HomeScreen/Tabs/SebhaTab/SebhaIcon.dart';
 
 class SebhaTab extends StatefulWidget {
-  SebhaTab({super.key});
+  const SebhaTab({super.key});
 
   @override
   State<SebhaTab> createState() => _SebhaTabState();

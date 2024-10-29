@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:islamiapp/AhadethDetailsScreen/AhadethDetailsScreen.dart';
-import 'package:islamiapp/HomeScreen/HomeScreen.dart';
-import 'package:islamiapp/QuraanDetailScreen/QuraanDetailsScreen.dart';
-import 'package:islamiapp/SplashScreen/SplashScreen.dart';
+import 'package:islamiapp/Screens/AhadethDetailsScreen/AhadethDetailsScreen.dart';
+import 'package:islamiapp/Screens/HomeScreen/HomeScreen.dart';
+import 'package:islamiapp/Screens/QuraanDetailScreen/QuraanDetailsScreen.dart';
+import 'package:islamiapp/Screens/SplashScreen/SplashScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        iconTheme: const IconThemeData(
+          color: Color(0xffB7935F),
+        ),
           appBarTheme: const AppBarTheme(
             backgroundColor: Colors.transparent,
             titleTextStyle: TextStyle(
@@ -50,7 +53,8 @@ class MyApp extends StatelessWidget {
         HomeScreen.routeName: (context) => const HomeScreen(),
         SplashScreen.routeName: (context) => const SplashScreen(),
         QuraanDetailsScreen.routeName: (context) => const QuraanDetailsScreen(),
-        AhadethDetailsScreen.routeName:(context) => const AhadethDetailsScreen(),
+        AhadethDetailsScreen.routeName: (context) =>
+            const AhadethDetailsScreen(),
       },
       initialRoute: SplashScreen.routeName,
     );

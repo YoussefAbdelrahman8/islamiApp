@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:islamiapp/AhadethDetailsScreen/AhadethDetailsScreen.dart';
 import 'package:islamiapp/DataClasses/Hadeth.dart';
+import 'package:islamiapp/Screens/AhadethDetailsScreen/AhadethDetailsScreen.dart';
 
 class AhadethTab extends StatefulWidget {
   const AhadethTab({super.key});

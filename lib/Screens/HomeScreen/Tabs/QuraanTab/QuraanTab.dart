@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamiapp/DataClasses/Sura.dart';
-import 'package:islamiapp/HomeScreen/Tabs/QuraanTab/QuraanRowWidget.dart';
+import 'package:islamiapp/Screens/HomeScreen/Tabs/QuraanTab/QuraanRowWidget.dart';
 
 class QuraanTab extends StatelessWidget {
   List<Sura> quranSuras = [
@@ -166,7 +166,7 @@ class QuraanTab extends StatelessWidget {
         Expanded(
           flex: 2,
           child: ListView.builder(
-              itemBuilder: (context, index){
+              itemBuilder: (context, index) {
                 quranSuras[index].suraIndex = index;
                 return QuraanRowWidget(sura: quranSuras[index]);
               },

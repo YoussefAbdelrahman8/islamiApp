@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:islamiapp/HomeScreen/Tabs/AhadethTab/AhadethTab.dart';
-import 'package:islamiapp/HomeScreen/Tabs/QuraanTab/QuraanTab.dart';
-import 'package:islamiapp/HomeScreen/Tabs/RadioTab/RadioTab.dart';
-import 'package:islamiapp/HomeScreen/Tabs/SebhaTab/SebhaTab.dart';
-
+import 'package:islamiapp/Screens/HomeScreen/Tabs/AhadethTab/AhadethTab.dart';
+import 'package:islamiapp/Screens/HomeScreen/Tabs/QuraanTab/QuraanTab.dart';
+import 'package:islamiapp/Screens/HomeScreen/Tabs/RadioTab/RadioTab.dart';
+import 'package:islamiapp/Screens/HomeScreen/Tabs/SebhaTab/SebhaTab.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeName = "home";
@@ -18,8 +17,8 @@ class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
   List<Widget> tabs = [
     const RadioTab(),
-     SebhaTab(),
-     const AhadethTab(),
+    const SebhaTab(),
+    const AhadethTab(),
     QuraanTab(),
   ];
 
@@ -31,8 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
             image: AssetImage("assets/images/bg3.png"), fit: BoxFit.cover),
       ),
       child: Scaffold(
-        appBar: AppBar(
-            title: const Center(child: Text("Islami"))),
+        appBar: AppBar(title: const Center(child: Text("Islami"))),
         body: tabs[currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: currentIndex,

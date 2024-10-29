@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:islamiapp/AhadethDetailsScreen/HadethWidget/HadethTextStyle.dart';
-import 'package:islamiapp/AhadethDetailsScreen/HadethWidget/HadethTitleStyle.dart';
 import 'package:islamiapp/DataClasses/Hadeth.dart';
+import 'package:islamiapp/Screens/AhadethDetailsScreen/HadethWidget/HadethTextStyle.dart';
+import 'package:islamiapp/Screens/AhadethDetailsScreen/HadethWidget/HadethTitleStyle.dart';
 
 class HadethWidget extends StatelessWidget {
   const HadethWidget({super.key});

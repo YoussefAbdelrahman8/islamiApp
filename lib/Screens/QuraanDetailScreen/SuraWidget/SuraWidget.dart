@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamiapp/DataClasses/Sura.dart';
-import 'package:islamiapp/QuraanDetailScreen/SuraWidget/SuraTextStyle.dart';
-import 'package:islamiapp/QuraanDetailScreen/SuraWidget/SuraTitleStyle.dart';
+import 'package:islamiapp/Screens/QuraanDetailScreen/SuraWidget/SuraTextStyle.dart';
+import 'package:islamiapp/Screens/QuraanDetailScreen/SuraWidget/SuraTitleStyle.dart';
 
 class SuraWidget extends StatelessWidget {
   Sura sura;

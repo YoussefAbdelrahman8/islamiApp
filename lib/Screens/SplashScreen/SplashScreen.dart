@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islamiapp/HomeScreen/HomeScreen.dart';
+import 'package:islamiapp/Screens/HomeScreen/HomeScreen.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
 class SplashScreen extends StatelessWidget {
