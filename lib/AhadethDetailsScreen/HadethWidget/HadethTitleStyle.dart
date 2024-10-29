@@ -10,7 +10,7 @@ HadethTitleStyle ({required this.hadethName, super.key});
     return Column(
       children: [
         Text(
-          "$hadethName",
+          hadethName,
           style: const TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: 25,
