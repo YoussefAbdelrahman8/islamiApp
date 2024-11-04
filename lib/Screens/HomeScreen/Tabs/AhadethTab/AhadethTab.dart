@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islamiapp/DataClasses/Hadeth.dart';
 import 'package:islamiapp/Screens/AhadethDetailsScreen/AhadethDetailsScreen.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AhadethTab extends StatefulWidget {
   const AhadethTab({super.key});
@@ -22,11 +23,11 @@ class _AhadethTabState extends State<AhadethTab> {
         const Divider(
           height: 0,
         ),
-        const Padding(
-          padding: EdgeInsets.all(8.0),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
           child: Text(
-            "Ahadeth",
-            style: TextStyle(
+            AppLocalizations.of(context)!.ahadeth,
+            style: const TextStyle(
               fontWeight: FontWeight.w600,
               fontSize: 25,
             ),
