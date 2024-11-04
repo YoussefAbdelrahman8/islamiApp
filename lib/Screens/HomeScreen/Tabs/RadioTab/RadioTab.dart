@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamiapp/Screens/HomeScreen/Tabs/RadioTab/PlayRow.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class RadioTab extends StatelessWidget {
   const RadioTab({super.key});
@@ -18,8 +19,8 @@ class RadioTab extends StatelessWidget {
           SizedBox(
             height: 0.05 * height,
           ),
-          const Text(
-            "Quraan Kareem Radio",
+           Text(
+            AppLocalizations.of(context)!.quraanKareemRadio,//error here
             style: TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.w600,

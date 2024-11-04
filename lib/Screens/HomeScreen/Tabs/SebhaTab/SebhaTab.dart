@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamiapp/Screens/HomeScreen/Tabs/SebhaTab/BottomPartWidget/BottomPartwidget.dart';
 import 'package:islamiapp/Screens/HomeScreen/Tabs/SebhaTab/SebhaIcon.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SebhaTab extends StatefulWidget {
   const SebhaTab({super.key});
@@ -10,18 +11,18 @@ class SebhaTab extends StatefulWidget {
 }
 
 class _SebhaTabState extends State<SebhaTab> {
-  List<String> tasbehStrings = [
-    "Subhan Allah",
-    "Al-Hamdulle",
-    "Allah Akbar",
-    "Astghforullah"
-  ];
   int i = 0;
   int counter = 0;
   double angle = 0;
 
   @override
   Widget build(BuildContext context) {
+    List<String> tasbehStrings = [
+      AppLocalizations.of(context)!.sub,
+      AppLocalizations.of(context)!.hamd,
+      AppLocalizations.of(context)!.tkber,
+      AppLocalizations.of(context)!.ghafr,
+    ];
     double height = MediaQuery.of(context).size.height;
     return Column(
       children: [
