@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:islamiapp/AppStyle/AppStyle.dart';
 import 'package:islamiapp/Screens/AhadethDetailsScreen/AhadethDetailsScreen.dart';
 import 'package:islamiapp/Screens/HomeScreen/HomeScreen.dart';
 import 'package:islamiapp/Screens/QuraanDetailScreen/QuraanDetailsScreen.dart';
@@ -16,7 +17,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
       localizationsDelegates: const [
         AppLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       locale: const Locale("ar"),
       theme: AppStyle.lightTheme,
       darkTheme: AppStyle.darkTheme,
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.dark,
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),
         SplashScreen.routeName: (context) => const SplashScreen(),

@@ -20,13 +20,8 @@ class BottomPartwidget extends StatelessWidget {
     return Expanded(
       child: Column(
         children: [
-          Text(
-            AppLocalizations.of(context)!.tasbehCount,
-            style: const TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
+          Text(AppLocalizations.of(context)!.tasbehCount,
+              style: Theme.of(context).textTheme.titleMedium),
           SizedBox(
             height: 0.02 * height,
           ),

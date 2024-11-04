@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class TasbehButton extends StatelessWidget {
   void Function() tsbehfunction;
   String tsabehString;
-   TasbehButton({required this.tsbehfunction,required this.tsabehString,super.key});
+
+  TasbehButton(
+      {required this.tsbehfunction, required this.tsabehString, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +18,13 @@ class TasbehButton extends StatelessWidget {
           fixedSize: const Size(200, 51),
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-          backgroundColor: Theme.of(context).colorScheme.primary),
+          backgroundColor: Theme.of(context).colorScheme.tertiary),
       child: Text(
         tsabehString,
-        style: TextStyle(
-          fontWeight: FontWeight.w400,
-          fontSize: 25,
-          color: Theme.of(context).colorScheme.onPrimary,
-        ),
+        style: Theme.of(context)
+            .textTheme
+            .titleMedium!
+            .copyWith(fontWeight: FontWeight.w400,color: Colors.black),
       ),
     );
   }

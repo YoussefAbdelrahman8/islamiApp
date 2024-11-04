@@ -1,82 +1,144 @@
 import 'package:flutter/material.dart';
 
-class AppStyle {
-  static const Color lightPrimaryColor = Color(0xffB7935F);
-  static const Color lightOnPrimaryColor = Colors.white;
-  static const Color lightOnSecColor = Colors.black;
-  static const Color darkPrimaryColor = Color(0xff141A2E);
-  static const Color darkOnPrimaryColor = Colors.white;
-  static const Color darkOnSecColor = Color(0xFFFACC1D);
+class AppStyle{
+  static bool isDark = true;
+  static Color lightPrimaryColor = const Color(0xffB7935F);
+  static Color darkPrimaryColor = const Color(0xff141A2E);
+  static Color darkSecondary = const Color(0xffFACC1D);
   static ThemeData lightTheme = ThemeData(
-    iconTheme: const IconThemeData(
-      color: lightPrimaryColor,
+    bottomSheetTheme: const BottomSheetThemeData(
+        backgroundColor: Colors.white
     ),
-    appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.transparent,
-      titleTextStyle: TextStyle(
-        color: lightOnSecColor,
-        fontWeight: FontWeight.w700,
-        fontSize: 30,
-      ),
+    textTheme: TextTheme(
+        titleMedium: const TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 25,
+            color: Colors.black
+        ),
+        bodyMedium: const TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 20,
+            color: Colors.black
+        ),
+        bodySmall: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: lightPrimaryColor
+        )
     ),
     scaffoldBackgroundColor: Colors.transparent,
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    dividerTheme: DividerThemeData(
+
+      color: lightPrimaryColor,
+      thickness: 3,
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: lightPrimaryColor,
-        unselectedIconTheme: IconThemeData(
-          color: lightOnPrimaryColor,
-          size: 35,
+        unselectedIconTheme: const IconThemeData(
+            color: Colors.white,
+            size: 30
         ),
-        selectedIconTheme: IconThemeData(
-          color: lightOnSecColor,
-          size: 35,
+        selectedIconTheme: const IconThemeData(
+            color: Colors.black,
+            size: 30
         ),
-        selectedItemColor: lightOnSecColor,
-        unselectedItemColor: lightOnPrimaryColor),
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.white
+    ),
     colorScheme: ColorScheme.fromSeed(
         seedColor: Colors.deepPurple,
         primary: lightPrimaryColor,
         secondary: lightPrimaryColor.withOpacity(0.57),
-        onPrimary: lightOnPrimaryColor,
-        onSecondary: lightOnSecColor),
-    dividerTheme: const DividerThemeData(
-      color: lightPrimaryColor,
-      thickness: 2,
-    ),
-  );
-  static ThemeData darkTheme = ThemeData(
-    iconTheme: const IconThemeData(
-      color: darkPrimaryColor,
+        onPrimary: Colors.white,
+        onSecondary: Colors.black,
+        tertiary: lightPrimaryColor
     ),
     appBarTheme: const AppBarTheme(
-      backgroundColor: Colors.transparent,
-      titleTextStyle: TextStyle(
-        color: darkOnSecColor,
-        fontWeight: FontWeight.w700,
-        fontSize: 30,
-      ),
+        backgroundColor: Colors.transparent,
+        centerTitle: true,
+        iconTheme: IconThemeData(
+            color: Colors.black
+        ),
+        titleTextStyle: TextStyle(
+            fontSize: 30,
+            color: Colors.black,
+            fontWeight: FontWeight.bold
+        )
+    ),
+    cardTheme: CardTheme(
+        margin: const EdgeInsets.all(16),
+        color: Colors.white.withOpacity(0.8),
+        surfaceTintColor:Colors.white.withOpacity(0.8) ,
+        elevation: 30
+    ),
+    useMaterial3: true,
+  );
+  static ThemeData darkTheme = ThemeData(
+    bottomSheetTheme: BottomSheetThemeData(
+        backgroundColor: darkPrimaryColor
+    ),
+    textTheme: TextTheme(
+        bodySmall: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+            color: darkSecondary
+        ),
+        titleMedium: const TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.w600,
+            color: Colors.white
+        ),
+        bodyMedium: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 20,
+            color: darkSecondary
+        )
     ),
     scaffoldBackgroundColor: Colors.transparent,
-    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+    dividerTheme: DividerThemeData(
+
+      color: darkSecondary,
+      thickness: 3,
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: darkPrimaryColor,
-        unselectedIconTheme: IconThemeData(
-          color: darkOnPrimaryColor,
-          size: 35,
+        unselectedIconTheme: const IconThemeData(
+            color: Colors.white,
+            size: 30
         ),
         selectedIconTheme: IconThemeData(
-          color: darkOnSecColor,
-          size: 35,
+            color: darkSecondary,
+            size: 30
         ),
-        selectedItemColor: darkOnSecColor,
-        unselectedItemColor: darkOnPrimaryColor),
+        selectedItemColor: darkSecondary,
+        unselectedItemColor: Colors.white
+    ),
     colorScheme: ColorScheme.fromSeed(
         seedColor: Colors.deepPurple,
         primary: darkPrimaryColor,
-        secondary: darkPrimaryColor.withOpacity(0.57),
-        onPrimary: darkOnPrimaryColor,
-        onSecondary: darkOnSecColor),
-    dividerTheme: const DividerThemeData(
-      color: darkPrimaryColor,
-      thickness: 2,
+        secondary: const Color(0xffB7935F).withOpacity(0.57),
+        onPrimary: Colors.white,
+        onSecondary: Colors.black,
+        tertiary: darkSecondary
     ),
+    appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.transparent,
+        centerTitle: true,
+        iconTheme: IconThemeData(
+            color: Colors.white
+        ),
+        titleTextStyle: TextStyle(
+            fontSize: 30,
+            color: Colors.white,
+            fontWeight: FontWeight.bold
+        )
+    ),
+    cardTheme: CardTheme(
+        margin: const EdgeInsets.all(16),
+        color: darkPrimaryColor.withOpacity(0.8),
+        surfaceTintColor:darkPrimaryColor.withOpacity(0.8) ,
+        elevation: 30
+    ),
+    useMaterial3: true,
   );
 }

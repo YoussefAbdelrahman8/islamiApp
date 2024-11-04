@@ -138,25 +138,19 @@ class QuraanTab extends StatelessWidget {
               child: Text(
                 textAlign: TextAlign.center,
                 AppLocalizations.of(context)!.suraName,
-                style: const TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: Theme.of(context).textTheme.titleMedium,
               ),
             ),
             Container(
               height: 0.05 * height,
               width: 3,
-              color: Theme.of(context).colorScheme.primary,
+              color: Theme.of(context).colorScheme.tertiary,
             ),
             Expanded(
               child: Text(
                 textAlign: TextAlign.center,
                 AppLocalizations.of(context)!.verseNum,
-                style: const TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: Theme.of(context).textTheme.titleMedium,
               ),
             ),
           ],

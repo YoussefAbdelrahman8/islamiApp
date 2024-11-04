@@ -25,13 +25,8 @@ class _AhadethTabState extends State<AhadethTab> {
         ),
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Text(
-            AppLocalizations.of(context)!.ahadeth,
-            style: const TextStyle(
-              fontWeight: FontWeight.w600,
-              fontSize: 25,
-            ),
-          ),
+          child: Text(AppLocalizations.of(context)!.ahadeth,
+              style: Theme.of(context).textTheme.titleMedium),
         ),
         const Divider(
           height: 0,
@@ -49,10 +44,10 @@ class _AhadethTabState extends State<AhadethTab> {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         AhadethList[index].hadethName,
-                        style: const TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 25,
-                        ),
+                        style: Theme.of(context)
+                            .textTheme
+                            .titleMedium
+                            ?.copyWith(fontWeight: FontWeight.w400),
                         textAlign: TextAlign.center,
                       ),
                     ),

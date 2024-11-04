@@ -5,20 +5,23 @@ class PlayRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Icon(
           Icons.skip_previous,
           size: 50,
+          color: Theme.of(context).colorScheme.tertiary,
         ),
         Icon(
           Icons.play_arrow,
           size: 70,
+          color: Theme.of(context).colorScheme.tertiary,
         ),
         Icon(
           Icons.skip_next,
           size: 50,
+          color: Theme.of(context).colorScheme.tertiary,
         ),
       ],
     );
