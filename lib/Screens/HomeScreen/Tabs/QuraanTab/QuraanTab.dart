@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamiapp/DataClasses/Sura.dart';
 import 'package:islamiapp/Screens/HomeScreen/Tabs/QuraanTab/QuraanRowWidget.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuraanTab extends StatelessWidget {
   List<Sura> quranSuras = [
@@ -133,11 +134,11 @@ class QuraanTab extends StatelessWidget {
         ),
         Row(
           children: [
-            const Expanded(
+            Expanded(
               child: Text(
                 textAlign: TextAlign.center,
-                "Sura Name",
-                style: TextStyle(
+                AppLocalizations.of(context)!.suraName,
+                style: const TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w600,
                 ),
@@ -148,11 +149,11 @@ class QuraanTab extends StatelessWidget {
               width: 3,
               color: Theme.of(context).colorScheme.primary,
             ),
-            const Expanded(
+            Expanded(
               child: Text(
                 textAlign: TextAlign.center,
-                "Verse Number",
-                style: TextStyle(
+                AppLocalizations.of(context)!.verseNum,
+                style: const TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.w600,
                 ),

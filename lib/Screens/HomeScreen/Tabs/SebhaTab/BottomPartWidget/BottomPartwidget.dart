@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islamiapp/Screens/HomeScreen/Tabs/SebhaTab/BottomPartWidget/CounterBox.dart';
 import 'package:islamiapp/Screens/HomeScreen/Tabs/SebhaTab/BottomPartWidget/TasbehButton.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class BottomPartwidget extends StatelessWidget {
   int counter;
@@ -19,9 +20,9 @@ class BottomPartwidget extends StatelessWidget {
     return Expanded(
       child: Column(
         children: [
-          const Text(
-            "Tasbeh Count",
-            style: TextStyle(
+          Text(
+            AppLocalizations.of(context)!.tasbehCount,
+            style: const TextStyle(
               fontSize: 25,
               fontWeight: FontWeight.w600,
             ),
