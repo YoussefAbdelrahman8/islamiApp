@@ -17,7 +17,6 @@ class HadethWidget extends StatelessWidget {
         width: 0.95 * width,
         child: Card(
           elevation: 5,
-          color: Theme.of(context).colorScheme.onPrimary,
           child: Column(
             children: [
               HadethTitleStyle(

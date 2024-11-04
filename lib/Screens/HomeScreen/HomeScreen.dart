@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islamiapp/AppStyle/AppStyle.dart';
 import 'package:islamiapp/Screens/HomeScreen/Tabs/AhadethTab/AhadethTab.dart';
 import 'package:islamiapp/Screens/HomeScreen/Tabs/QuraanTab/QuraanTab.dart';
 import 'package:islamiapp/Screens/HomeScreen/Tabs/RadioTab/RadioTab.dart';
 import 'package:islamiapp/Screens/HomeScreen/Tabs/SebhaTab/SebhaTab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islamiapp/Screens/HomeScreen/Tabs/SettingsTab/SettingsTab.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeName = "home";
@@ -22,14 +24,18 @@ class _HomeScreenState extends State<HomeScreen> {
     const SebhaTab(),
     const AhadethTab(),
     QuraanTab(),
+    const SettingsTab(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage("assets/images/bg3.png"), fit: BoxFit.cover),
+            image: AssetImage(AppStyle.isDark
+                ? "assets/images/home_dark_background.png"
+                : "assets/images/bg3.png"),
+            fit: BoxFit.cover),
       ),
       child: Scaffold(
         appBar: AppBar(
@@ -64,7 +70,11 @@ class _HomeScreenState extends State<HomeScreen> {
               icon:
                   const ImageIcon(AssetImage("assets/images/moshaf_gold.png")),
               label: AppLocalizations.of(context)!.quraan,
-            )
+            ),
+            BottomNavigationBarItem(
+                backgroundColor: Theme.of(context).colorScheme.primary,
+                icon: const Icon(Icons.settings),
+                label: "Settings")
           ],
         ),
       ),

@@ -9,7 +9,6 @@ class RadioTab extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
 
-
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -19,13 +18,8 @@ class RadioTab extends StatelessWidget {
           SizedBox(
             height: 0.05 * height,
           ),
-           Text(
-            AppLocalizations.of(context)!.quraanKareemRadio,//error here
-            style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
+          Text(AppLocalizations.of(context)!.quraanKareemRadio, //error here
+              style: Theme.of(context).textTheme.titleMedium),
           SizedBox(
             height: 0.04 * height,
           ),

@@ -19,28 +19,26 @@ class QuraanRowWidget extends StatelessWidget {
         children: [
           Expanded(
             child: Text(
-              textAlign: TextAlign.center,
-              sura.suraName,
-              style: const TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
+                textAlign: TextAlign.center,
+                sura.suraName,
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium!
+                    .copyWith(fontWeight: FontWeight.w400)),
           ),
           Container(
             height: 0.05 * height,
             width: 3,
-            color: Theme.of(context).colorScheme.primary,
+            color: Theme.of(context).colorScheme.tertiary,
           ),
           Expanded(
             child: Text(
-              textAlign: TextAlign.center,
-              sura.verseNumber,
-              style: const TextStyle(
-                fontSize: 25,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
+                textAlign: TextAlign.center,
+                sura.verseNumber,
+                style: Theme.of(context)
+                    .textTheme
+                    .titleMedium!
+                    .copyWith(fontWeight: FontWeight.w400)),
           ),
         ],
       ),

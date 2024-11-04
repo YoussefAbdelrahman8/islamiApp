@@ -12,10 +12,7 @@ class SuraTextStyle extends StatelessWidget {
       child: Text(
         textAlign: TextAlign.right,
         content,
-        style: const TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.w400,
-        ),
+          style:Theme.of(context).textTheme.bodyMedium
       ),
     );
   }

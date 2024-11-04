@@ -9,13 +9,10 @@ class SuraTitleStyle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
-          "Surat $suraName",
-          style: const TextStyle(
-            fontWeight: FontWeight.w400,
-            fontSize: 25,
-          ),
-        ),
+        Text("Surat $suraName",
+            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  fontSize: 25,
+                )),
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 50),
           child: Divider(),
