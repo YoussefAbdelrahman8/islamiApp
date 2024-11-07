@@ -23,17 +23,24 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "ahadeth": MessageLookupByLibrary.simpleMessage("Ahadeth"),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "dark": MessageLookupByLibrary.simpleMessage("Dark"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "ghafr": MessageLookupByLibrary.simpleMessage("Astghforullah"),
         "hamd": MessageLookupByLibrary.simpleMessage("Al-Hamdulle"),
         "islami": MessageLookupByLibrary.simpleMessage("Islami"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "light": MessageLookupByLibrary.simpleMessage("Light"),
         "quraan": MessageLookupByLibrary.simpleMessage("Quraan"),
         "quraanKareemRadio":
             MessageLookupByLibrary.simpleMessage("Quraan Kareem Radio"),
         "radio": MessageLookupByLibrary.simpleMessage("Radio"),
+        "settings": MessageLookupByLibrary.simpleMessage("Settings"),
         "sub": MessageLookupByLibrary.simpleMessage("Subhan Allah"),
         "suraName": MessageLookupByLibrary.simpleMessage("Sura Name"),
         "tasbeh": MessageLookupByLibrary.simpleMessage("Tasbeh"),
         "tasbehCount": MessageLookupByLibrary.simpleMessage("Tasbeh Count"),
+        "theme": MessageLookupByLibrary.simpleMessage("Theme"),
         "tkber": MessageLookupByLibrary.simpleMessage("Allah Akbar"),
         "verseNum": MessageLookupByLibrary.simpleMessage("Verse Number")
       };

@@ -1,15 +1,22 @@
 {
-"islami": "Islami",
+  "islami": "Islami",
   "quraanKareemRadio": "Quraan Kareem Radio",
-  "radio" : "Radio",
-  "tasbeh" : "Tasbeh",
+  "radio": "Radio",
+  "tasbeh": "Tasbeh",
   "ahadeth": "Ahadeth",
   "quraan": "Quraan",
   "suraName": "Sura Name",
   "verseNum": "Verse Number",
   "tasbehCount": "Tasbeh Count",
   "sub": "Subhan Allah",
-  "hamd":"Al-Hamdulle",
-  "tkber":"Allah Akbar",
-  "ghafr":"Astghforullah"
+  "hamd": "Al-Hamdulle",
+  "tkber": "Allah Akbar",
+  "ghafr": "Astghforullah",
+  "settings": "Settings",
+  "language" : "Language",
+  "theme" : "Theme",
+  "dark": "Dark",
+  "light": "Light",
+  "arabic": "Arabic",
+  "english" : "English"
 }

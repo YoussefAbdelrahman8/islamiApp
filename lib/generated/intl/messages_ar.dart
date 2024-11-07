@@ -23,17 +23,24 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "ahadeth": MessageLookupByLibrary.simpleMessage("احاديث"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "dark": MessageLookupByLibrary.simpleMessage("مظلم"),
+        "english": MessageLookupByLibrary.simpleMessage("الانجليزية"),
         "ghafr": MessageLookupByLibrary.simpleMessage("استغفر الله"),
         "hamd": MessageLookupByLibrary.simpleMessage("الحمد الله"),
         "islami": MessageLookupByLibrary.simpleMessage("اسلامي"),
+        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "light": MessageLookupByLibrary.simpleMessage("مضئ"),
         "quraan": MessageLookupByLibrary.simpleMessage("قران"),
         "quraanKareemRadio":
             MessageLookupByLibrary.simpleMessage("اذاعة القران الكريم"),
         "radio": MessageLookupByLibrary.simpleMessage("راديو"),
+        "settings": MessageLookupByLibrary.simpleMessage("الاعدادات"),
         "sub": MessageLookupByLibrary.simpleMessage("سبحان الله"),
         "suraName": MessageLookupByLibrary.simpleMessage("اسم السورة"),
         "tasbeh": MessageLookupByLibrary.simpleMessage("تسبيح"),
         "tasbehCount": MessageLookupByLibrary.simpleMessage("عدد التسبيح"),
+        "theme": MessageLookupByLibrary.simpleMessage("الحالة اللونية"),
         "tkber": MessageLookupByLibrary.simpleMessage("الله اكبر"),
         "verseNum": MessageLookupByLibrary.simpleMessage("عدد الايات")
       };

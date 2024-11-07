@@ -42,7 +42,7 @@ class _SebhaTabState extends State<SebhaTab> {
   }
 
   tsbehFunc() {
-    if (counter != 30) {
+    if (counter != 33) {
       setState(() {
         angle = 0.21 * counter;
         counter++;
