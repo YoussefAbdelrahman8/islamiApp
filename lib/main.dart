@@ -1,14 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:islamiapp/AppStyle/AppStyle.dart';
+import 'package:islamiapp/Providers/SettingsProvider.dart';
 import 'package:islamiapp/Screens/AhadethDetailsScreen/AhadethDetailsScreen.dart';
 import 'package:islamiapp/Screens/HomeScreen/HomeScreen.dart';
 import 'package:islamiapp/Screens/QuraanDetailScreen/QuraanDetailsScreen.dart';
 import 'package:islamiapp/Screens/SplashScreen/SplashScreen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => SettingsProvider(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -16,6 +23,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SettingsProvider settingsProvider = Provider.of<SettingsProvider>(context);
     return MaterialApp(
       localizationsDelegates: const [
         AppLocalizations.delegate,
@@ -27,10 +35,10 @@ class MyApp extends StatelessWidget {
         Locale('en'), // English
         Locale('ar'), // Arabic
       ],
-      locale: const Locale("ar"),
+      locale: settingsProvider.locale,
       theme: AppStyle.lightTheme,
       darkTheme: AppStyle.darkTheme,
-      themeMode: ThemeMode.dark,
+      themeMode: settingsProvider.themeMode,
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),
         SplashScreen.routeName: (context) => const SplashScreen(),
