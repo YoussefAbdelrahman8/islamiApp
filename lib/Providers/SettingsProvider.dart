@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islamiapp/SharedPrefService.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+
 
 class SettingsProvider extends ChangeNotifier {
   ThemeMode themeMode = ThemeMode.light;
