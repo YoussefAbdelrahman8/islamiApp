@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:islamiapp/SharedPrefService.dart';
 
 
 class SettingsProvider extends ChangeNotifier {
